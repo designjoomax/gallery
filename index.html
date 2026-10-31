@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gallery - Joomax Teknologi Indonesia</title>
+<meta name="description" content="Dokumentasi kegiatan dan momen Joomax Teknologi Indonesia.">
+<link rel="icon" href="assets/icon/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Joomax Teknologi Indonesia">
+<meta property="og:title" content="Gallery - Joomax">
+<meta property="og:description" content="Dokumentasi kegiatan dan momen Joomax Teknologi Indonesia.">
+<meta property="og:url" content="https://designjoomax.github.io/gallery/">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+<!-- Header (dari repo headerfooter) -->
+<joomax-header sticky theme="light" current="gallery"></joomax-header>
+
+<main>
+  <!-- Daftar album -->
+  <section class="view" id="listView">
+    <div class="wrap ghead">
+      <p class="eyebrow">Gallery</p>
+      <h1 id="gTitle">Dokumentasi Kegiatan</h1>
+      <p class="lead" id="gSub">Momen dan dokumentasi kegiatan Joomax.</p>
+      <div class="tools">
+        <div class="chips" id="chips" role="group" aria-label="Filter kategori"></div>
+        <label class="gsearch">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+          <input id="gq" type="search" placeholder="Cari album" autocomplete="off" aria-label="Cari album">
+        </label>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="albums" id="albums"></div>
+      <p class="empty" id="empty" hidden>Album tidak ditemukan.</p>
+    </div>
+  </section>
+
+  <!-- Isi album -->
+  <section class="view" id="albumView" hidden>
+    <div class="wrap">
+      <a class="back" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Semua Album</a>
+      <div class="ahead">
+        <span class="pill" id="aCat"></span>
+        <h1 id="aTitle"></h1>
+        <p id="aMeta"></p>
+        <p class="adesc" id="aDesc"></p>
+      </div>
+      <div class="photos" id="photos"></div>
+      <div class="empty big" id="aEmpty" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="3"/><circle cx="9" cy="10" r="1.5"/><path d="m5 17 5-4 4 3 2-2 3 3"/></svg>
+        <p>Foto untuk album ini akan segera ditambahkan.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer (dari repo headerfooter) -->
+<joomax-footer></joomax-footer>
+
+<!-- Lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Pratinjau foto" aria-hidden="true" tabindex="-1">
+  <button class="lb-x" id="lbX" type="button" aria-label="Tutup"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <button class="lb-nav prev" id="lbPrev" type="button" aria-label="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+  <button class="lb-nav next" id="lbNext" type="button" aria-label="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+  <figure class="lb-fig"><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<script src="https://designjoomax.github.io/headerfooter/joomax-layout.config.js"></script>
+<script src="https://designjoomax.github.io/headerfooter/joomax-layout.js"></script>
+<script src="js/gallery.config.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>
